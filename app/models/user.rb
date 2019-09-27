@@ -6,11 +6,13 @@ class User < ApplicationRecord
 
   enum role: [:Teacher, :Student]
 
-  validates :name, presence: true
+  validates :name, presence: true,
+    length: { maximum: 50 }
 
   validates :email, 
     presence: true, 
     uniqueness: true,
+    length: { maximum: 100 },
     format: { with: Devise.email_regexp, allow_blank: true }
   
   # Validate password
