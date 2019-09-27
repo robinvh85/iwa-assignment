@@ -5,8 +5,10 @@ ruby '2.6.4'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.0'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
+
+# Use mysql as the database for Active Record
+gem 'mysql2', '~> 0.5.2'
+
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -28,9 +30,17 @@ gem 'jbuilder', '~> 2.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
+gem 'dotenv-rails', '~> 2.7', '>= 2.7.5'
+gem 'bootstrap', '~> 4.3', '>= 4.3.1'
+gem 'font-awesome-sass', '~> 5.11', '>= 5.11.2'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'pry'
+  gem 'database_cleaner', '~> 1.7'
+  gem 'factory_bot_rails', '~> 5.1'
+  gem 'rspec-rails', '~> 3.8', '>= 3.8.2'
 end
 
 group :development do
@@ -48,6 +58,7 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
+  gem 'simplecov', '~> 0.17.1'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

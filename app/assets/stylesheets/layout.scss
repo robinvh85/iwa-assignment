@@ -1,0 +1,17 @@
+.header-title {
+  font-size: 30px;
+
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+.navigator {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+
+  a {
+    font-size: 16px;
+  }
+}
