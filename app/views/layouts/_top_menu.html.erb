@@ -1,5 +1,5 @@
-<div class='navigator'>
-  <%= link_to 'Users', '#', class: 'mr-3' %> |
-  <%= link_to 'Tests', '#', class: 'ml-3 mr-3' %> |
-  <%= link_to('Logout', destroy_user_session_path, class: 'ml-3 mr-3', method: :delete,) %>   
+<div class="navigator">
+  <%= link_to "Users", users_path, class: "mr-3 #{menu_active("users")}" %> |
+  <%= link_to "Tests", "#", class: "ml-3 mr-3 #{menu_active("tests")}" %> |
+  <%= link_to("Logout", destroy_user_session_path, class: "ml-3 mr-3", method: :delete,) %>   
 </div>
