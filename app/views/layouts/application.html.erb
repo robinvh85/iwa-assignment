@@ -10,6 +10,19 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="d-flex flex-md-row align-items-center p-3 border-bottom shadow-sm">
+      <h5 class="mr-md-auto header-title">
+        <%= link_to root_path do %>
+          <i class="fas fa-home"></i>
+          IWA Assignment
+        <% end %>
+      </h5>
+      <nav>
+        <%= render '/layouts/navigator' %>
+      </nav>
+    </div>
+    <div class="text-center">
+      <%= yield %>
+    </div>
   </body>
 </html>
