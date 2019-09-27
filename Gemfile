@@ -33,6 +33,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'dotenv-rails', '~> 2.7', '>= 2.7.5'
 gem 'bootstrap', '~> 4.3', '>= 4.3.1'
 gem 'font-awesome-sass', '~> 5.11', '>= 5.11.2'
+gem 'devise', '~> 4.7', '>= 4.7.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -18,10 +18,18 @@
         <% end %>
       </h5>
       <nav>
-        <%= render '/layouts/navigator' %>
+        <% if current_user %>
+          <%= render '/layouts/top_menu' %>
+        <% end %>
       </nav>
     </div>
     <div class="text-center">
+      <div class='layout-notice'>
+        <% flash.each do |key, value| %>
+          <% type = key == 'alert' ? 'danger' : 'primary' %>
+          <div class="alert alert-<%= type %>"><%= value %></div>
+        <% end %>
+      </div>
       <%= yield %>
     </div>
   </body>
