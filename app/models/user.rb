@@ -9,12 +9,12 @@ class User < ApplicationRecord
   validates :name, presence: true,
     length: { maximum: 50 }
 
-  validates :email, 
-    presence: true, 
+  validates :email,
+    presence: true,
     uniqueness: true,
     length: { maximum: 100 },
     format: { with: Devise.email_regexp, allow_blank: true }
-  
+
   # Validate password
   validates :password, presence: true, on: :create
   validates_length_of :password, within: Devise.password_length, allow_blank: true
