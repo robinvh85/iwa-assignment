@@ -34,7 +34,7 @@ gem 'dotenv-rails', '~> 2.7', '>= 2.7.5'
 gem 'bootstrap', '~> 4.3', '>= 4.3.1'
 gem 'font-awesome-sass', '~> 5.11', '>= 5.11.2'
 gem 'devise', '~> 4.7', '>= 4.7.1'
-gem 'active_model_serializers', '~> 0.9.3'
+gem 'active_model_serializers', '~> 0.10.0', require: true, github: 'rails-api/active_model_serializers', branch: '0-10-stable'
 gem 'swagger-blocks', '~> 3.0'
 gem 'swagger_ui_engine', git: 'https://github.com/zuzannast/swagger_ui_engine', branch: "1.1.4-version"
 
