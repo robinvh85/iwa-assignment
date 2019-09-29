@@ -16,14 +16,5 @@ module Swagger::Parameters
         key :"$ref", :AuthenticationParams
       end
     end
-
-    base.parameter :answer_body do
-      key :name, "body"
-      key :in, :body
-      key :description, "Params that need to submit answer"
-      schema do
-        key :"$ref", :AnswerParams
-      end
-    end
   end
 end

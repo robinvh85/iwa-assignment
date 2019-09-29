@@ -20,7 +20,7 @@ Rails.application.routes.draw do
       end
 
       resources :tests, only: %w[index show]
-      resources :answers, only: %w[create]
+      resources :test_results, only: %w[create]
     end
 
     match "*path", to: "base#catch_404", via: :all
