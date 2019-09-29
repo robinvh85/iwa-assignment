@@ -35,6 +35,8 @@ gem 'bootstrap', '~> 4.3', '>= 4.3.1'
 gem 'font-awesome-sass', '~> 5.11', '>= 5.11.2'
 gem 'devise', '~> 4.7', '>= 4.7.1'
 gem 'active_model_serializers', '~> 0.9.3'
+gem 'swagger-blocks', '~> 3.0'
+gem 'swagger_ui_engine', git: 'https://github.com/zuzannast/swagger_ui_engine', branch: "1.1.4-version"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

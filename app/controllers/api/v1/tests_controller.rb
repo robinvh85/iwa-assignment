@@ -1,6 +1,8 @@
 module Api
   module V1
     class TestsController < ::Api::BaseController
+      include Swagger::TestsApi
+
       def index
         result = Test.all
 
