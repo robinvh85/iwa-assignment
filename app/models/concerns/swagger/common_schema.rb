@@ -15,19 +15,6 @@ module Swagger::CommonSchema
       end
     end
 
-    swagger_schema :AnswerParams do
-      property :question_id do
-        key :type, :string
-      end
-
-      property :option_ids do
-        key :type, :array
-        items do
-          key :type, :integer
-        end
-      end
-    end
-
     swagger_schema :ErrorOutput do
       property :message do
         key :type, :string

@@ -8,8 +8,6 @@ class User < ApplicationRecord
 
   enum role: [:Teacher, :Student]
 
-  has_many :test_results, dependent: :destroy
-
   validates :name, presence: true,
     length: { maximum: 50 }
 

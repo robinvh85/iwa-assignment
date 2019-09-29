@@ -1,27 +1,25 @@
 module Swagger
-  module AnswersApi
+  module TestResultsApi
     extend ActiveSupport::Concern
     include Swagger::Blocks
 
     included do
-      swagger_path '/api/v1/answers' do
+      swagger_path '/api/v1/test_results' do
         operation :post do
-          key :description, 'Submit the answer or a question'
-          key :operationId, :submit_answer
-          key :tags, ['Answers']
+          key :description, 'Submit the test_result for a question'
+          key :operationId, :submit_test_result
+          key :tags, ['TestResults']
 
           parameter :token
-          parameter :answer_body
 
           response 200 do
-            key :description, 'Submit answer successfully'
+            key :description, 'Submit test result successfully'
             schema do
               key :"$ref", :MessageOutput
             end
           end
 
           extend Swagger::ErrorResponses::UnauthorizedError
-          extend Swagger::ErrorResponses::InvalidRecordError
         end
       end
     end

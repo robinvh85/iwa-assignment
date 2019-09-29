@@ -30,17 +30,6 @@ ActiveRecord::Schema.define(version: 2019_09_29_040014) do
     t.index ["test_id"], name: "index_questions_on_test_id"
   end
 
-  create_table "test_results", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
-    t.bigint "user_id"
-    t.bigint "question_id"
-    t.bigint "option_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["option_id"], name: "index_test_results_on_option_id"
-    t.index ["question_id"], name: "index_test_results_on_question_id"
-    t.index ["user_id"], name: "index_test_results_on_user_id"
-  end
-
   create_table "tests", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
     t.string "name"
     t.text "description"

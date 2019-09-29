@@ -22,7 +22,7 @@ module Swagger
         User,
         Api::V1::AuthenticationController,
         Api::V1::TestsController,
-        Api::V1::AnswersController,
+        Api::V1::TestResultsController,
         self
       ].freeze
     end
