@@ -27,4 +27,6 @@ Rails.application.routes.draw do
   end
 
   mount SwaggerUiEngine::Engine, at: '/api_docs'
+
+  match "*path", to: "application#catch_404", via: :all
 end

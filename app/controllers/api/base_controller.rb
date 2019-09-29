@@ -1,7 +1,7 @@
 module Api
   class BaseController < ActionController::API
-    include Response
-    include ExceptionHandler
+    include Api::Response
+    include Api::ExceptionHandler
     include ActionController::Serialization
 
     before_action :authenticate_request
