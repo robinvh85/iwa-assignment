@@ -1,6 +1,8 @@
 module Api
   module V1
     class AuthenticationController < ::Api::BaseController
+      include Swagger::AuthenticationApi
+
       skip_before_action :authenticate_request, only: [:login]
 
       def login

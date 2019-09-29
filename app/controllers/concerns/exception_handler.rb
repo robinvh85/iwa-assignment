@@ -15,15 +15,6 @@ module ExceptionHandler
       )
     end
 
-    rescue_from Errors::ParameterError do |exception|
-      json_response(
-        {
-          message: exception.message,
-          errors: exception.error_messages
-        }, :bad_reques
-      )
-    end
-
     rescue_from ActiveRecord::RecordNotFound do |e|
       json_response({ message: e.message }, :not_found)
     end

@@ -1,4 +1,6 @@
 class Test < ApplicationRecord
+  include Swagger::TestSchema
+
   has_many :questions, dependent: :destroy
 
   validates :name, presence: true,

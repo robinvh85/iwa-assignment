@@ -1,6 +1,8 @@
 module Api
   module V1
     class AnswersController < ::Api::BaseController
+      include Swagger::AnswersApi
+
       def create
         question = Question.find(params[:question_id])
         save_result(question) if(question)

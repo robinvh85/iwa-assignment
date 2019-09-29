@@ -12,7 +12,8 @@ Rails.application.routes.draw do
   # Api
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
-      # get 'api_docs', to: 'api_docs#index'
+      get 'api_docs', to: 'api_docs#index'
+
       namespace :authentication do
         post :login
         post :logout
@@ -24,4 +25,6 @@ Rails.application.routes.draw do
 
     match "*path", to: "base#catch_404", via: :all
   end
+
+  mount SwaggerUiEngine::Engine, at: '/api_docs'
 end
