@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  include Swagger::UserSchema
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable, :recoverable, :registerable, :validatable
   devise :database_authenticatable,
