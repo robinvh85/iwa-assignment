@@ -12,7 +12,7 @@ module Api
       def show
         test = Test.find(params[:id])
         result = TestSerializer.new(test).as_json
-        result[:questions] = ActiveModel::ArraySerializer.new(test.questions)
+        result[:questions] = ActiveModel::Serializer::CollectionSerializer.new(test.questions)
 
         json_response(result)
       end
