@@ -45,6 +45,15 @@ rails s
 - Url: http://localhost:3000/api_docs
 - Basic authentication: `admin/admin`
 
+## Demo
+### Web admin
+- Url: https://evening-plateau-47262.herokuapp.com/
+- Login with sample user: `teacher@example.com/12345678`
+
+### Document for APIs
+- Url: https://evening-plateau-47262.herokuapp.com/api_docs
+- Basic authentication: `admin/admin`
+
 ## Problems
 
 ### Technical Problems
