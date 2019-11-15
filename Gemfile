@@ -37,7 +37,7 @@ gem 'devise', '~> 4.7', '>= 4.7.1'
 gem 'active_model_serializers', '~> 0.10.0', require: true, github: 'rails-api/active_model_serializers', branch: '0-10-stable'
 gem 'swagger-blocks', '~> 3.0'
 gem 'swagger_ui_engine', git: 'https://github.com/zuzannast/swagger_ui_engine', branch: "1.1.4-version"
-gem 'rack-cors', '~> 1.0', '>= 1.0.3'
+gem 'rack-cors', '~> 1.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
